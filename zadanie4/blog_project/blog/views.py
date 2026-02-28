@@ -36,8 +36,7 @@ def register(request):
 
 @login_required
 def profile(request):
-    """Strona profilu - edycja bio i avatara."""
-    profile_obj = get_object_or_404(Profile, user=request.user)
+    profile_obj, created = Profile.objects.get_or_create(user=request.user)
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=profile_obj)
         if form.is_valid():
