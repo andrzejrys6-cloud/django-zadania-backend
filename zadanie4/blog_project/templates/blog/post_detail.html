@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p class="text-muted">{{ post.author.username }} | {{ post.created_at|date:"d.m.Y H:i" }}</p>
+<hr>
+<p>{{ post.content }}</p>
+{% if user == post.author %}
+    <a href="{% url 'post_edit' post.id %}" class="btn btn-warning">Edytuj post</a>
+{% endif %}
+<a href="{% url 'post_list' %}" class="btn btn-outline-secondary">← Wróć</a>
+{% endblock %}

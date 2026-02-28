@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block title %}Moje posty{% endblock %}
+{% block content %}
+<h1>Moje posty</h1>
+{% for post in posts %}
+<div class="card mb-2">
+    <div class="card-body d-flex justify-content-between">
+        <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+        <div>
+            <span class="badge {% if post.published %}bg-success{% else %}bg-secondary{% endif %}">
+                {% if post.published %}Opublikowany{% else %}Szkic{% endif %}
+            </span>
+            <a href="{% url 'post_edit' post.id %}" class="btn btn-sm btn-warning ms-2">Edytuj</a>
+        </div>
+    </div>
+</div>
+{% empty %}<p>Nie masz jeszcze żadnych postów.</p>
+{% endfor %}
+{% endblock %}
