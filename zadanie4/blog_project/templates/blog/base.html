@@ -14,7 +14,10 @@
                 <a class="btn btn-outline-light btn-sm" href="{% url 'post_create' %}">Nowy post</a>
                 <a class="btn btn-outline-light btn-sm" href="{% url 'my_posts' %}">Moje posty</a>
                 <a class="btn btn-outline-light btn-sm" href="{% url 'profile' %}">Profil</a>
-                <a class="btn btn-outline-danger btn-sm" href="{% url 'logout' %}">Wyloguj</a>
+                <form method="post" action="{% url 'logout' %}" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Wyloguj</button>
+                </form>
             {% else %}
                 <a class="btn btn-outline-light btn-sm" href="{% url 'login' %}">Zaloguj</a>
                 <a class="btn btn-outline-light btn-sm" href="{% url 'register' %}">Rejestracja</a>
