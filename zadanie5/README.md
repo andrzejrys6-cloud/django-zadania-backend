@@ -43,7 +43,7 @@ Wejdź na **http://127.0.0.1:8000/api/products/** i dodaj produkty.
 ```
 
 ### Krok 3 — Dodaj produkt do koszyka
-Wejdź na **http://127.0.0.1:8000/api/cart/add_item/** i wyślij:
+Wejdź na **http://127.0.0.1:8000/api/cart/items/** i wyślij:
 
 ```json
 {
