@@ -6,6 +6,7 @@ class Category(models.Model):
     description = models.TextField(blank=True)
 
     class Meta:
+        verbose_name = "Kategoria"
         verbose_name_plural = "Kategorie"
 
     def __str__(self):
@@ -21,6 +22,7 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category, blank=True)
 
     class Meta:
+        verbose_name = "Post"
         verbose_name_plural = "Posty"
         ordering = ['-created_at']
 
