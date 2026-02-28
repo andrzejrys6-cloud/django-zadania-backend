@@ -8,7 +8,7 @@ Prosta aplikacja blogowa. Nie ma żadnego interfejsu dla zwykłych użytkownikó
 
 ```powershell
 cd zadanie1/blog_project
-py manage.py makemigrations
+py manage.py makemigrations blog
 py manage.py migrate
 py manage.py createsuperuser
 py manage.py runserver
