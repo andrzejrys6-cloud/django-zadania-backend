@@ -103,6 +103,7 @@ class OrderViewSet(viewsets.GenericViewSet):
     """Zamówienia użytkownika."""
     permission_classes = [IsAuthenticated]
     serializer_class = OrderSerializer
+    queryset = Order.objects.none()
 
     def list(self, request):
         """Lista zamówień zalogowanego użytkownika."""
