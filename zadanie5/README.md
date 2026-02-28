@@ -101,7 +101,7 @@ Możesz filtrować listę produktów przez parametry w adresie URL:
 | GET | /api/orders/ | Lista moich zamówień | Zalogowany użytkownik |
 | POST | /api/orders/ | Złóż zamówienie z koszyka | Zalogowany użytkownik |
 | GET | /api/orders/1/ | Szczegóły zamówienia | Zalogowany użytkownik |
-| PATCH | /api/orders/1/update_status/ | Zmień status zamówienia | Tylko admin |
+| PATCH | /api/orders/1/status/ | Zmień status zamówienia | Tylko admin |
 
 ### Statusy zamówień (dla admina)
 
