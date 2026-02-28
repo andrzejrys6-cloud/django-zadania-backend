@@ -91,8 +91,8 @@ Możesz filtrować listę produktów przez parametry w adresie URL:
 | Metoda | Adres | Co robi |
 |--------|-------|---------|
 | GET | /api/cart/ | Pokaż koszyk |
-| POST | /api/cart/add_item/ | Dodaj produkt do koszyka |
-| DELETE | /api/cart/remove_item/1/ | Usuń pozycję z koszyka |
+| POST | /api/cart/items/ | Dodaj produkt do koszyka |
+| DELETE | /api/cart/items/1/ | Usuń pozycję z koszyka |
 
 ### Zamówienia
 
