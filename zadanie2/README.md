@@ -8,7 +8,7 @@ Rozbudowa zadania 1 o publiczne strony dostępne dla każdego — lista postów,
 
 ```powershell
 cd zadanie2/blog_project
-py manage.py makemigrations
+py manage.py makemigrations blog
 py manage.py migrate
 py manage.py createsuperuser
 py manage.py runserver
