@@ -8,6 +8,7 @@ Blog z pełnym systemem kont użytkowników. Każdy może się zarejestrować, z
 
 ```powershell
 cd zadanie4/blog_project
+py manage.py makemigrations
 py manage.py migrate
 py manage.py createsuperuser
 py manage.py runserver

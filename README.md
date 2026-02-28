@@ -32,6 +32,7 @@ Każde zadanie to osobny projekt Django. Schemat jest zawsze taki sam — wejdź
 cd zadanie1/blog_project
 
 # Krok 1 — utwórz tabele w bazie danych (tylko przy pierwszym uruchomieniu)
+py manage.py makemigrations
 py manage.py migrate
 
 # Krok 2 — utwórz konto administratora (tylko przy pierwszym uruchomieniu)

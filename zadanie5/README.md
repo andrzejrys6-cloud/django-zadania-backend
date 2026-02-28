@@ -8,6 +8,7 @@ Backend sklepu internetowego. Produkty, koszyk, zamówienia — wszystko przez R
 
 ```powershell
 cd zadanie5/shop_project
+py manage.py makemigrations
 py manage.py migrate
 py manage.py createsuperuser
 py manage.py runserver
